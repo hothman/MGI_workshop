@@ -5,7 +5,9 @@ tasks:
   - name: Script Task
     init: echo 'init script' # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
     command: echo 'start script'
-  - name: initialize base envirement
+  - name: initialize conda
+    command: conda init
+  - name: activate base env 
     command: . /home/gitpod/.bashrc 
 
 # List the ports to expose. Learn more: https://www.gitpod.io/docs/configure/workspaces/ports
