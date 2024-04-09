@@ -11,9 +11,10 @@ RUN wget https://github.com/conda-forge/miniforge/releases/latest/download/Minif
 # Add Miniconda to the PATH environment variable
 ENV PATH="/opt/miniforge/bin:${PATH}"
 
-#vim
-RUN  apt-get -y  update &&  apt-get install -y  vim
-RUN apt-get install -y git 
+#vim 
+RUN  apt-get -y  update &&  apt-get install -y  vim 
+RUN apt-get install -y git
+RUN apt-get install -y r-base
 # Verify installation
 RUN conda --version
 
@@ -21,4 +22,4 @@ RUN conda --version
 RUN conda config --add channels bioconda 
 RUN conda config --add channels conda-forge
 
-RUN mamba install samtools -y 
+#RUN mamba install r-base=4.1.2 bioconductor-dada2 -y 
