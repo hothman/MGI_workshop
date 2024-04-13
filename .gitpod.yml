@@ -1,7 +1,20 @@
-image: condaforge/mambaforge:latest
-
+# Image of workspace. Learn more: https://www.gitpod.io/docs/configure/workspaces/workspace-image
 tasks:
   - name: install rstudioinit
     init: |
-      sudo conda config --add channels bioconda conda-forge
-      sudo mamba install r-base -y
+      sudo apt-get update 
+      sudo apt-get upgrade -y
+      wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O miniforge.sh
+      sudo bash miniforge.sh -b -p ${HOME}/miniforge && rm miniforge.sh
+      
+      PATH="${HOME}/miniforge/bin:${PATH}"
+      source /home/gitpod/.bashrc
+
+
+      gp ports visibility 8787:public
+
+ports:
+  # RStudio port
+  - port: 8787
+    onOpen: notify
+    visibility: public    
