@@ -6,9 +6,8 @@ tasks:
       sudo apt-get upgrade -y
       wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh -O miniforge.sh
       sudo bash miniforge.sh -b -p ${HOME}/miniforge && rm miniforge.sh
-      
-      PATH="${HOME}/miniforge/bin:${PATH}"
-      sudo source ${HOME}/.bashrc
+      export PATH="${HOME}/miniforge/bin:${PATH}"
+      sudo . ${HOME}/.bashrc
       sudo mamba install r-base -y
 
 
