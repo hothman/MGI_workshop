@@ -8,8 +8,8 @@ tasks:
       sudo bash miniforge.sh -b -p ${HOME}/miniforge && rm miniforge.sh
       
       PATH="${HOME}/miniforge/bin:${PATH}"
-      source ${HOME}/.bashrc
-      mamba install r-base -y
+      sudo source ${HOME}/.bashrc
+      sudo mamba install r-base -y
 
 
       gp ports visibility 8787:public
