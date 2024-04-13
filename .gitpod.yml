@@ -3,4 +3,5 @@ image: condaforge/mambaforge:latest
 tasks:
   - name: install rstudioinit
     init: |
-      mamba install r-base -y
+      sudo conda config --add channels bioconda conda-forge
+      sudo mamba install r-base -y
