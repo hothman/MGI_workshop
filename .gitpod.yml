@@ -9,6 +9,9 @@ tasks:
       wget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.12.1-402-amd64.deb
       sudo gdebi -n rstudio-server-2023.12.1-402-amd64.deb
       gp ports visibility 8787:public
+      sudo adduser mgi
+  - name: Open RStudio Tab
+    command: gp preview $(gp url 8787) --external
 
 ports:
   # RStudio port
