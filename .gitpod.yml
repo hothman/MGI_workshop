@@ -1,15 +1,2 @@
 # Image of workspace. Learn more: https://www.gitpod.io/docs/configure/workspaces/workspace-image
-images: hothman/mgi
-tasks:
-  - name: set the envirement
-    init: |
-      gp ports visibility 8787:public
-      sudo adduser mgi
-  - name: Open RStudio Tab
-    command: gp preview $(gp url 8787) --external
-
-ports:
-  # RStudio port
-  - port: 8787
-    onOpen: notify
-    visibility: public    
+images: hothman/mgi:v0.1
