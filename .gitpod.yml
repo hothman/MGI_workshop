@@ -15,6 +15,7 @@ tasks:
       gp ports visibility 8787:public
       sudo adduser mgi
     command: |
+      conda config --add channels bioconda conda-forge 
       mamba install r-base=4.1.3  r-tibble=3.2.1 bioconductor-dada2=1.22.0 -y 
 
 
