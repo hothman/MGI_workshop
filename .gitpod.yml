@@ -1,6 +1,7 @@
 # Image of workspace. Learn more: https://www.gitpod.io/docs/configure/workspaces/workspace-image
 image: hothman/mgi:v0.1
-  - name: set the envirement
+tasks:
+  - name: set the envirement 
     init: |
       gp ports visibility 8787:public
       sudo adduser mgi
