@@ -10,6 +10,9 @@ tasks:
       gp ports visibility 8787:public
       sudo adduser mgi
       su - mgi
+      wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh \
+      -O miniforge.sh && bash miniforge.sh \
+      -b -p /home/${USER}/miniforge && rm miniforge.sh
   - name: Open RStudio Tab
     command: gp preview $(gp url 8787) --external
 
