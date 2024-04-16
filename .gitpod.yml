@@ -9,9 +9,15 @@ tasks:
 
   - name: Open RStudio Tab
     command: gp preview $(gp url 8787) --external
+             gp preview  $(gp url 8888) --external
+
 
 ports:
   # RStudio port
   - port: 8787
     onOpen: notify
-    visibility: public    
+    visibility: public
+
+  - port: 8888
+    onOpen: notify
+    visibility: public
