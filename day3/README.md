@@ -67,7 +67,7 @@ First, we will create an isolated virtual environment called mgi-2024 using cond
 
 ```
 (base) $ mamba create --name mgi-2024
-(base) $ mamba activate pristini-2023
+(base) $ conda activate mgi-2024
 ```
 
 Next, we will install some bioinformatics tools in the created virtual environment. Conda handles packages via channels. Channels are remote repositories where packages are stores. There are plenty of conda packages. The most important ones are the default, the anaconda channel, and the conda forge channel. The one that we are interested in is bioconda that was created to normalize and facilitate the usage of bioinformatics tools. First, we want to search for samtools from bioconda and install version 0.10.1.  
