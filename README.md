@@ -7,7 +7,7 @@ The event is organized and sponsored by:
 
 To proceed with the tutorial, you must have both an active GitHub account and a Gitpod account.
 
-## Running the remote workshop
+## Running the remote sesion
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/hothman/MGI_workshop)
 
 ## Repository of data
